@@ -24739,10 +24739,7 @@ function RemoveInvalidCharsForAndroid(input) {
         .replace(/\.{2,}/g, '.'); // 連続するピリオドを一つに置換
 }
 function RemoveInvalidCharsForiOS(input) {
-    return input
-        .toLowerCase()
-        .replace(/[^a-z0-9.]/g, '') // 英小文字と数字とピリオド以外を削除
-        .replace(/^[0-9]+/, ''); // 先頭の数字を削除
+    return input;
 }
 function RemoveInvalidChars() {
     const buildTarget = core.getInput('build-target').toLowerCase();
