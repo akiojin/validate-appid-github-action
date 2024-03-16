@@ -24741,7 +24741,7 @@ function RemoveInvalidCharsForAndroid(input) {
 function RemoveInvalidCharsForiOS(input) {
     return input
         .toLowerCase()
-        .replace(/[^a-z0-9]/g, '') // 英小文字と数字以外を削除
+        .replace(/[^a-z0-9.]/g, '') // 英小文字と数字とピリオド以外を削除
         .replace(/^[0-9]+/, ''); // 先頭の数字を削除
 }
 function RemoveInvalidChars() {
