@@ -1,0 +1,19 @@
+name: 'Validate App ID'
+description: 'Validate App ID action for GitHub Actions'
+inputs:
+  domain:
+    description: >
+      Specify the inverted domain name of the organization.
+
+      ex) com.example
+    required: true
+  app-name:
+    description: >
+      Specify the application name.
+    required: true
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+branding:
+  icon: "upload-cloud"
+  color: "orange"
