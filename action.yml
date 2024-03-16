@@ -1,6 +1,13 @@
 name: 'Validate App ID'
 description: 'Validate App ID action for GitHub Actions'
 inputs:
+  build-target:
+    description: >
+      Allows the selection of an active build target before loading a project.
+      
+      Possible options are:
+      Standalone, Win, Win64, OSXUniversal, Linux, Linux64, LinuxUniversal, iOS, Android, Web, WebStreamed, WebGL, XboxOne, PS4, WindowsStoreApps, Switch, N3DS, tvOS.
+    required: true
   domain:
     description: >
       Specify the inverted domain name of the organization.
