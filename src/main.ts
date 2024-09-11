@@ -14,6 +14,11 @@ function RemoveInvalidCharsForiOS(input: string): string
   return input
 }
 
+function RemoveInvalidCharsForOtherPlatform(input: string): string
+{
+  return input
+}
+
 function RemoveInvalidChars(): string
 {
   const buildTarget = core.getInput('build-target').toLowerCase()
@@ -25,7 +30,7 @@ function RemoveInvalidChars(): string
   } else if (buildTarget === 'android') {
     return RemoveInvalidCharsForAndroid(`${domain}.${appName}`)
   } else {
-    throw new Error('Not supported build target. Please set ios or android.')
+    return RemoveInvalidCharsForOtherPlatform(`${domain}.${appName}`)
   }
 }
 
