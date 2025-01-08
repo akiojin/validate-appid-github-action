@@ -1,6 +1,6 @@
 {
   "name": "validate-appid-github-action",
-  "version": "0.1.7",
+  "version": "1.0.0",
   "description": "Validate App ID action for GitHub Actions",
   "main": "dist/index.js",
   "scripts": {
